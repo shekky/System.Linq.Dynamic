@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>AK.System.Linq.Dynamic</id>
-        <version>1.1.20</version>
+        <version>1.1.32</version>
         <title>Dynamic Linq Library</title>
         <authors>Aleh Karasik</authors>
         <owners>Aleh Karasik</owners>
@@ -14,20 +14,21 @@
 The library allows you to construct dynamic linq queries using string expressions instead of C# expressions.
 
 See more information on project site.</description>
-        <summary>Supports Framework 3.5 and 4.0+</summary>
-        <releaseNotes>Renamed Union method to UnionAll method to avoid signature trashing with System.Linq.
-
-Updated assembly information.</releaseNotes>
+        <summary>Supports .NET Framework 3.5, 4.0, 4.5, 4.7, .NET Core 2.0</summary>
+        <releaseNotes>Added binaries specifically targeting .NET Framework 4.5, 4.7+.
+Added binaries targeting .NET Core 2.0.
+Removed dependency on FluentAssertionNA package.</releaseNotes>
         <tags>dynamic linq c# entities</tags>
-        <dependencies>
-            <dependency id="FluentValidationNA" version="1.2.16" />
-        </dependencies>
     </metadata>
     <files>
         <file src="..\Src\System.Linq.Dynamic.For35\bin\Release\System.Linq.Dynamic.dll" target="lib\net35\System.Linq.Dynamic.dll" />
         <file src="..\Src\System.Linq.Dynamic.For35\bin\Release\System.Linq.Dynamic.XML" target="lib\net35\System.Linq.Dynamic.XML" />
-        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.dll" target="lib\net40\System.Linq.Dynamic.dll" />
-        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.XML" target="lib\net40\System.Linq.Dynamic.XML" />
+        <file src="..\Src\System.Linq.Dynamic.For40\bin\Release\System.Linq.Dynamic.dll" target="lib\net40\System.Linq.Dynamic.dll" />
+        <file src="..\Src\System.Linq.Dynamic.For40\bin\Release\System.Linq.Dynamic.XML" target="lib\net40\System.Linq.Dynamic.XML" />
+        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.dll" target="lib\net47\System.Linq.Dynamic.dll" />
+        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.XML" target="lib\net47\System.Linq.Dynamic.XML" />
+        <file src="..\Src\System.Linq.Dynamic.ForNC\bin\Release\System.Linq.Dynamic.dll" target="lib\netcoreapp2.0\System.Linq.Dynamic.dll" />
+        <file src="..\Src\System.Linq.Dynamic.ForNC\bin\Release\System.Linq.Dynamic.XML" target="lib\netcoreapp2.0\System.Linq.Dynamic.XML" />
         <file src="..\Src\System.Linq.Dynamic.SL\Bin\Release\System.Linq.Dynamic.SL.dll" target="lib\sl50\System.Linq.Dynamic.SL.dll" />
         <file src="..\Src\System.Linq.Dynamic.SL\Bin\Release\System.Linq.Dynamic.SL.XML" target="lib\sl50\System.Linq.Dynamic.SL.XML" />
     </files>

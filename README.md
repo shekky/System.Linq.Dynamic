@@ -1,3 +1,8 @@
+# Supported Platforms
+* .NET Framework 3.5, 4.0+ 
+* .NET Core 2.0
+* Sliverlight
+
 # About
 As far as I know the history is somewhat similar to this.
 
@@ -13,7 +18,7 @@ Then sometime ago @NArnott dismissed the NuGet package and deleted the documenta
 [2]: http://ak-dynamic-linq.azurewebsites.net
 
 # Credits
-I would like to thank everyone who put his effort in this project. 
+I would like to thank everyone who put effort in this project. 
 
 # What's next?
 I use this library on several production project that is why it gets updated with new features but most of the time it is not. The project itself is alive and I encourage you to report bugs and propose feature requests (if I would have time I will do both).
