@@ -59,7 +59,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(predicate))
 #endif
             {
-                throw new ArgumentException(nameof(predicate));
+                throw new ArgumentException("Expected non-empty string", nameof(predicate));
             }
 
             LambdaExpression lambda = DynamicExpression.ParseLambda(source.ElementType, typeof(bool), predicate, args);
@@ -98,7 +98,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(selector))
 #endif
             {
-                throw new ArgumentException(nameof(selector));
+                throw new ArgumentException("Expected non-empty string", nameof(selector));
             }
 
             LambdaExpression lambda = DynamicExpression.ParseLambda(source.ElementType, null, selector, args);
@@ -132,7 +132,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(selector))
 #endif
             {
-                throw new ArgumentException(nameof(selector));
+                throw new ArgumentException("Expected non-empty string", nameof(selector));
             }
 
             LambdaExpression lambda = DynamicExpression.ParseLambda(source.ElementType, null, selector, args);
@@ -182,7 +182,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(collectionSelector))
 #endif
             {
-                throw new ArgumentException(nameof(collectionSelector));
+                throw new ArgumentException("Expected non-empty string", nameof(collectionSelector));
             }
 
 #if NET35
@@ -191,7 +191,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(resultSelector))
 #endif
             {
-                throw new ArgumentException(nameof(resultSelector));
+                throw new ArgumentException("Expected non-empty string", nameof(resultSelector));
             }
 
             LambdaExpression sourceSelectLambda = DynamicExpression.ParseLambda(source.ElementType, null, collectionSelector, collectionSelectorArgs);
@@ -263,7 +263,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(ordering))
 #endif
             {
-                throw new ArgumentException(nameof(ordering));
+                throw new ArgumentException("Expected non-empty string", nameof(ordering));
             }
 
             ParameterExpression[] parameters = new ParameterExpression[] {
@@ -316,7 +316,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(keySelector))
 #endif
             {
-                throw new ArgumentException(nameof(keySelector));
+                throw new ArgumentException("Expected non-empty string", nameof(keySelector));
             }
 
 #if NET35
@@ -325,7 +325,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(resultSelector))
 #endif
             {
-                throw new ArgumentException(nameof(resultSelector));
+                throw new ArgumentException("Expected non-empty string", nameof(resultSelector));
             }
 
             LambdaExpression keyLambda = DynamicExpression.ParseLambda(source.ElementType, null, keySelector, args);
@@ -383,7 +383,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(keySelector))
 #endif
             {
-                throw new ArgumentException(nameof(keySelector));
+                throw new ArgumentException("Expected non-empty string", nameof(keySelector));
             }
 
             LambdaExpression keyLambda = DynamicExpression.ParseLambda(source.ElementType, null, keySelector, args);
@@ -505,7 +505,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(outerKeySelector))
 #endif
             {
-                throw new ArgumentException(nameof(outerKeySelector));
+                throw new ArgumentException("Expected non-empty string", nameof(outerKeySelector));
             }
 
 #if NET35
@@ -514,7 +514,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(innerKeySelector))
 #endif
             {
-                throw new ArgumentException(nameof(innerKeySelector));
+                throw new ArgumentException("Expected non-empty string", nameof(innerKeySelector));
             }
 
 #if NET35
@@ -523,7 +523,7 @@ namespace System.Linq.Dynamic
             if (string.IsNullOrWhiteSpace(resultSelector))
 #endif
             {
-                throw new ArgumentException(nameof(resultSelector));
+                throw new ArgumentException("Expected non-empty string", nameof(resultSelector));
             }
 
             //http://stackoverflow.com/questions/389094/how-to-create-a-dynamic-linq-join-extension-method
