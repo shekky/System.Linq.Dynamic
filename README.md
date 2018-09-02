@@ -1,3 +1,7 @@
+# System.Linq.Dynamic
+
+[![Build status](https://ci.appveyor.com/api/projects/status/l8re6chvvrnothy5?svg=true&pendingText=netfx40%20-%20pending&passingText=netfx40%20-%20passing&failingText=netfx40%20-%20failing)](https://ci.appveyor.com/project/meatGUY/system-linq-dynamic)
+
 # About
 As far as I know the history is somewhat similar to this.
 
