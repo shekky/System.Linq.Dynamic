@@ -23,10 +23,8 @@ Removed dependency on FluentAssertionNA package.</releaseNotes>
     <files>
         <file src="..\Src\System.Linq.Dynamic.For35\bin\Release\System.Linq.Dynamic.dll" target="lib\net35\System.Linq.Dynamic.dll" />
         <file src="..\Src\System.Linq.Dynamic.For35\bin\Release\System.Linq.Dynamic.XML" target="lib\net35\System.Linq.Dynamic.XML" />
-        <file src="..\Src\System.Linq.Dynamic.For40\bin\Release\System.Linq.Dynamic.dll" target="lib\net40\System.Linq.Dynamic.dll" />
-        <file src="..\Src\System.Linq.Dynamic.For40\bin\Release\System.Linq.Dynamic.XML" target="lib\net40\System.Linq.Dynamic.XML" />
-        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.dll" target="lib\net47\System.Linq.Dynamic.dll" />
-        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.XML" target="lib\net47\System.Linq.Dynamic.XML" />
+        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.dll" target="lib\net40\System.Linq.Dynamic.dll" />
+        <file src="..\Src\System.Linq.Dynamic\bin\Release\System.Linq.Dynamic.XML" target="lib\net40\System.Linq.Dynamic.XML" />
         <file src="..\Src\System.Linq.Dynamic.ForNC\bin\Release\System.Linq.Dynamic.dll" target="lib\netcoreapp2.0\System.Linq.Dynamic.dll" />
         <file src="..\Src\System.Linq.Dynamic.ForNC\bin\Release\System.Linq.Dynamic.XML" target="lib\netcoreapp2.0\System.Linq.Dynamic.XML" />
         <file src="..\Src\System.Linq.Dynamic.SL\Bin\Release\System.Linq.Dynamic.SL.dll" target="lib\sl50\System.Linq.Dynamic.SL.dll" />
