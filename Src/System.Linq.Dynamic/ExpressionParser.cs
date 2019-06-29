@@ -231,7 +231,7 @@ namespace System.Linq.Dynamic
             typeof(Math),
             typeof(Convert),
             typeof(Uri),
-#if !NET35 && !SILVERLIGHT
+#if !NET35 && !NETCOREAPP2_0 && !SILVERLIGHT
 			typeof(Data.Objects.EntityFunctions)
 #endif
         };

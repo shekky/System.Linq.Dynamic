@@ -1,5 +1,4 @@
-﻿using FluentValidationNA;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +21,10 @@ namespace System.Linq.Dynamic.Tests.Helpers
 
         public static IList<User> GenerateSampleModels(int total, bool allowNullableProfiles = false)
         {
-            Validate.Argument(total).IsInRange(x => total >= 0).Check();
+            if (total < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(total));
+            }
 
             var list = new List<User>();
 
