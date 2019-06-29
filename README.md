@@ -2,6 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/y3nstxii1ig02071?svg=true&pendingText=netfx35%20-%20pending&passingText=netfx35%20-%20passing&failingText=netfx35%20-%20failing)](https://ci.appveyor.com/project/meatGUY/system-linq-dynamic-jldxg) 
 [![Build status](https://ci.appveyor.com/api/projects/status/l8re6chvvrnothy5?svg=true&pendingText=netfx40%20-%20pending&passingText=netfx40%20-%20passing&failingText=netfx40%20-%20failing)](https://ci.appveyor.com/project/meatGUY/system-linq-dynamic)
+[![Build status](https://img.shields.io/badge/nuget-1.1.20.1-blue.svg)](https://www.nuget.org/packages/AK.System.Linq.Dynamic/1.1.20.1)
+
 
 # About
 As far as I know the history is somewhat similar to this.

@@ -40,36 +40,6 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\System.Linq.Dynamic\Properties\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNetFx|AnyCPU'">
-    <OutputPath>bin\ReleaseNetFx\</OutputPath>
-    <DefineConstants>TRACE;NET35</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseSL|AnyCPU'">
-    <OutputPath>bin\ReleaseSL\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNetFx35|AnyCPU'">
-    <OutputPath>bin\ReleaseNetFx35\</OutputPath>
-    <DefineConstants>TRACE;NET35</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNetCore|AnyCPU'">
-    <OutputPath>bin\ReleaseNetCore\</OutputPath>
-    <DefineConstants>TRACE;NET35</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -117,8 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\System.Linq.Dynamic\Properties\key.snk">
-      <Link>Properties\key.snk</Link>
+      <Link>key.snk</Link>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Linq.Dynamic.For35\System.Linq.Dynamic.For35.csproj">
@@ -126,7 +97,9 @@
       <Name>System.Linq.Dynamic.For35</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
