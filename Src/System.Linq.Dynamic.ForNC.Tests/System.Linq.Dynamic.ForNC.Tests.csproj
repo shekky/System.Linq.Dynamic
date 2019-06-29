@@ -8,6 +8,7 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\System.Linq.Dynamic\Properties\key.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
+    <Configurations>Debug;Release;ReleaseNetCore</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
