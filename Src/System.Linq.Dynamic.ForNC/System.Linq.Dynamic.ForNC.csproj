@@ -6,7 +6,7 @@
     <Deterministic>False</Deterministic>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\System.Linq.Dynamic\Properties\key.snk</AssemblyOriginatorKeyFile>
-    <Configurations>Debug;Release;ReleaseNetCore</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
