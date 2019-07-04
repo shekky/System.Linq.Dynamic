@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,8 @@ namespace System.Linq.Dynamic.Tests.Helpers.Entities
 {
     public class BlogContext : DbContext
     {
-        public BlogContext(string connectionString)
-            : base(connectionString)
+        public BlogContext(DbConnection connection)
+            : base(connection, true)
         {
 
         }

@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq.Dynamic.Tests.Helpers.Entities;
 using System.Data.Entity;
 using System.Linq.Dynamic.Tests.Helpers;
+using Effort;
 
 namespace System.Linq.Dynamic.Tests
 {
@@ -23,14 +24,6 @@ namespace System.Linq.Dynamic.Tests
         //
         // You can use the following additional attributes as you write your tests:
         //
-        // Use ClassInitialize to run code before running the first test in the class
-        // [ClassInitialize()]
-        // public static void MyClassInitialize(TestContext testContext) { }
-        //
-        // Use ClassCleanup to run code after all tests in a class have run
-        // [ClassCleanup()]
-        // public static void MyClassCleanup() { }
-        //
 
         static readonly Random Rnd = new Random(1);
 
@@ -38,18 +31,13 @@ namespace System.Linq.Dynamic.Tests
         [TestInitialize()]
         public void MyTestInitialize()
         {
-            var connectionString = String.Format(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DynamicLinqTestDb_{0};Integrated Security=True", TestContext.TestName);
-
-            _context = new BlogContext(connectionString);
-            _context.Database.Delete();
+            _context = new BlogContext(DbConnectionFactory.CreateTransient());
         }
 
         // Use TestCleanup to run code after each test has run
         [TestCleanup()]
         public void MyTestCleanup()
         {
-            _context.Database.Delete();
-
             _context.Dispose();
             _context = null;
         }
@@ -488,7 +476,6 @@ namespace System.Linq.Dynamic.Tests
 
         class CustomTypeProvider : DefaultDynamicLinqCustomTypeProvider
         {
-
             public override HashSet<Type> GetCustomTypes()
             {
                 var result = base.GetCustomTypes();
