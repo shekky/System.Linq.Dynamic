@@ -1,9 +1,19 @@
 # System.Linq.Dynamic
 
-[![Build status](https://ci.appveyor.com/api/projects/status/y3nstxii1ig02071?svg=true&pendingText=netfx35%20-%20pending&passingText=netfx35%20-%20passing&failingText=netfx35%20-%20failing)](https://ci.appveyor.com/project/meatGUY/system-linq-dynamic-jldxg) 
-[![Build status](https://ci.appveyor.com/api/projects/status/l8re6chvvrnothy5?svg=true&pendingText=netfx40%20-%20pending&passingText=netfx40%20-%20passing&failingText=netfx40%20-%20failing)](https://ci.appveyor.com/project/meatGUY/system-linq-dynamic)
-[![Build status](https://img.shields.io/badge/nuget-1.1.20.1-blue.svg)](https://www.nuget.org/packages/AK.System.Linq.Dynamic/1.1.20.1)
+## Build & Test
 
+| Configuration | Status |
+|---|---|
+| netfx35 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetFx35)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=4) |
+| netfx40 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetFx40)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=5) |
+| netcoreapp | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetCore)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=7) |
+| Silverlight | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/SL)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=6) |
+
+## Package
+
+| Package | Version |
+|---|---|
+| NuGet | [![Build status](https://img.shields.io/badge/nuget-1.1.20.1-blue.svg)](https://www.nuget.org/packages/AK.System.Linq.Dynamic/1.1.20.1) |
 
 # About
 As far as I know the history is somewhat similar to this.
