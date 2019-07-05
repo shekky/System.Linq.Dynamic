@@ -6,7 +6,7 @@
     <title>Dynamic Linq Library</title>
     <authors>Aleh Karasik</authors>
     <owners>Aleh Karasik</owners>
-    <licence type="expression">MS-PL</licence>"
+    <license type="expression">MS-PL</license>"
     <projectUrl>http://ak-dynamic-linq.azurewebsites.net</projectUrl>
     <repository url="https://github.com/meatGUY/System.Linq.Dynamic"></repository>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
