@@ -74,7 +74,7 @@ namespace System.Linq.Dynamic.Tests
                     var post = new Post()
                     {
 #if NETCORE
-                        PostId = i,
+                        PostId = (i * postCount) + j,
                         BlogId = blog.BlogId,
 #endif
                         Blog = blog,
