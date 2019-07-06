@@ -40,7 +40,7 @@ namespace System.Linq.Dynamic.Tests
             _context = new BlogContext(DbConnectionFactory.CreateTransient());
 #elif NETCORE
             var options = new DbContextOptionsBuilder<BlogContext>()
-                .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
+                .UseInMemoryDatabase(databaseName: this.TestContext.TestName)
                 .Options;
 
             _context = new BlogContext(options);
