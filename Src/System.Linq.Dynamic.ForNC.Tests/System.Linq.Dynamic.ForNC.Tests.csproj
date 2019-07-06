@@ -11,18 +11,27 @@
     <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;NETCORE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="..\System.Linq.Dynamic.Tests\BasicTests.cs" Link="BasicTests.cs" />
     <Compile Include="..\System.Linq.Dynamic.Tests\ComplexTests.cs" Link="ComplexTests.cs" />
     <Compile Include="..\System.Linq.Dynamic.Tests\DynamicTests.cs" Link="DynamicTests.cs" />
+    <Compile Include="..\System.Linq.Dynamic.Tests\EntitiesTests.cs" Link="EntitiesTests.cs" />
     <Compile Include="..\System.Linq.Dynamic.Tests\ExpressionTests.cs" Link="ExpressionTests.cs" />
-    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\Helper.cs" Link="Helper.cs" />
-    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\SampleModels.cs" Link="SampleModels.cs" />
+    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\Entities\BlogContext.cs" Link="Helpers\Entities\BlogContext.cs" />
+    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\Entities\SampleEntities.cs" Link="Helpers\Entities\SampleEntities.cs" />
+    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\Helper.cs" Link="Helpers\Helper.cs" />
+    <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\SampleModels.cs" Link="Helpers\SampleModels.cs" />
     <Compile Include="..\System.Linq.Dynamic.Tests\InternalTests.cs" Link="InternalTests.cs" />
     <Compile Include="..\System.Linq.Dynamic.Tests\OperatorTests.cs" Link="OperatorTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
     <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
@@ -33,6 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\Entities\" />
     <Folder Include="Properties\" />
   </ItemGroup>
 
