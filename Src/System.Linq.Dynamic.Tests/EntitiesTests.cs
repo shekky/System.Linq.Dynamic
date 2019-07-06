@@ -62,7 +62,7 @@ namespace System.Linq.Dynamic.Tests
                 var blog = new Blog()
                 {
 #if NETCORE
-                    BlogId = i,
+                    BlogId = i + 1,
 #endif
                     Name = "Blog" + (i + 1)
                 };
@@ -74,7 +74,7 @@ namespace System.Linq.Dynamic.Tests
                     var post = new Post()
                     {
 #if NETCORE
-                        PostId = (i * postCount) + j,
+                        PostId = (i * postCount) + j + 1,
                         BlogId = blog.BlogId,
 #endif
                         Blog = blog,
