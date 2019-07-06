@@ -73,10 +73,10 @@
       <Link>ExpressionTests.cs</Link>
     </Compile>
     <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\Helper.cs">
-      <Link>Helper.cs</Link>
+      <Link>Helpers\Helper.cs</Link>
     </Compile>
     <Compile Include="..\System.Linq.Dynamic.Tests\Helpers\SampleModels.cs">
-      <Link>SampleModels.cs</Link>
+      <Link>Helpers\SampleModels.cs</Link>
     </Compile>
     <Compile Include="..\System.Linq.Dynamic.Tests\InternalTests.cs">
       <Link>InternalTests.cs</Link>
@@ -89,7 +89,6 @@
     <None Include="..\System.Linq.Dynamic\Properties\key.snk">
       <Link>key.snk</Link>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\System.Linq.Dynamic.For35\System.Linq.Dynamic.For35.csproj">
