@@ -59,14 +59,13 @@ namespace System.Linq.Dynamic.Tests
         {
             for (int i = 0; i < blogCount; i++)
             {
-                var blog = new Blog() { Name = "Blog" + (i + 1) };
-
+                var blog = new Blog()
+                {
 #if NETCORE
-                // For EntityFrameworkCore we use InMemory DB provider.
-                // Because it doesn't emulate relational database
-                // we have to manually create posts list ...
-                blog.Posts = new List<Post>(postCount);
+                    BlogId = i,
 #endif
+                    Name = "Blog" + (i + 1)
+                };
 
                 _context.Blogs.Add(blog);
 
@@ -74,6 +73,10 @@ namespace System.Linq.Dynamic.Tests
                 {
                     var post = new Post()
                     {
+#if NETCORE
+                        PostId = i,
+                        BlogId = blog.BlogId,
+#endif
                         Blog = blog,
                         Title = String.Format("Blog {0} - Post {1}", i + 1, j + 1),
                         Content = "My Content",
@@ -81,11 +84,6 @@ namespace System.Linq.Dynamic.Tests
                         PostGlobalId = Guid.NewGuid(),
                         NumberOfReads = Rnd.Next(0, 5000)
                     };
-
-#if NETCORE
-                    // ... and add posts to blog
-                    blog.Posts.Add(post);
-#endif
 
                     _context.Posts.Add(post);
                 }
@@ -454,7 +452,7 @@ namespace System.Linq.Dynamic.Tests
             PopulateTestData();
 
             //remove all posts from first record (to allow Defaults case to validate)
-            _context.Posts.RemoveRange(_context.Blogs.OrderBy(x => x.BlogId).First<Blog>().Posts);
+            _context.Posts.RemoveRange(_context.Blogs.OrderBy(x => x.BlogId).Include<Blog>("Posts").First<Blog>().Posts);
             _context.SaveChanges();
             
             //Act
