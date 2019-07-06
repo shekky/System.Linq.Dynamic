@@ -15,7 +15,7 @@
       The library allows you to construct dynamic linq queries using string expressions instead of C# expressions.
       See more information on project site.
     </description>
-    <summary>Supports .NET Framework 3.5, 4.0+, .NET Core 2.0</summary>
+    <summary>Supports .NET Framework 3.5, 4.0+, .NET Core 2.0+</summary>
     <releaseNotes>
       Added binaries targeting .NET Core 2.0.
       Removed dependency on FluentAssertionNA package.
