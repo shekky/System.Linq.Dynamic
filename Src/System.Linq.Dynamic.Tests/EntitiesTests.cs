@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq.Dynamic.Tests.Helpers.Entities;
-using System.Data.Entity;
 using System.Linq.Dynamic.Tests.Helpers;
+
+#if NET35 || NET40
 using Effort;
+using System.Data.Entity;
+#elif NETCORE
+using Microsoft.EntityFrameworkCore;
+#endif
 
 namespace System.Linq.Dynamic.Tests
 {
@@ -20,7 +25,7 @@ namespace System.Linq.Dynamic.Tests
 
         public TestContext TestContext { get; set; }
 
-        #region Entities Test Support
+#region Entities Test Support
         //
         // You can use the following additional attributes as you write your tests:
         //
@@ -31,7 +36,15 @@ namespace System.Linq.Dynamic.Tests
         [TestInitialize()]
         public void MyTestInitialize()
         {
+#if NET35 || NET40
             _context = new BlogContext(DbConnectionFactory.CreateTransient());
+#elif NETCORE
+            var options = new DbContextOptionsBuilder<BlogContext>()
+                .UseInMemoryDatabase(databaseName: "Add_writes_to_database")
+                .Options;
+
+            _context = new BlogContext(options);
+#endif
         }
 
         // Use TestCleanup to run code after each test has run
@@ -69,9 +82,9 @@ namespace System.Linq.Dynamic.Tests
             _context.SaveChanges();
         }
 
-        #endregion
+#endregion
 
-        #region Select Tests
+#region Select Tests
 
         [TestMethod]
         public void Entities_Select_SingleColumn()
@@ -147,9 +160,9 @@ namespace System.Linq.Dynamic.Tests
             }
         }
 
-        #endregion
+#endregion
 
-        #region Where Tests
+#region Where Tests
 
         [TestMethod]
         public void Entities_Where_ByDateTime_AsObject()
@@ -247,9 +260,9 @@ namespace System.Linq.Dynamic.Tests
             CollectionAssert.AreEqual(expected, test);
         }
 
-        #endregion
+#endregion
 
-        #region GroupBy Tests
+#region GroupBy Tests
 
         [TestMethod]
         public void Entities_GroupBy_SingleKey()
@@ -400,9 +413,9 @@ namespace System.Linq.Dynamic.Tests
             }
         }
 
-        #endregion
+#endregion
 
-        #region Default If Empty Tests
+#region Default If Empty Tests
 
         [TestMethod]
         public void DefaultIfEmpty_AsStringExpressions()
@@ -418,9 +431,9 @@ namespace System.Linq.Dynamic.Tests
             CollectionAssert.AreEqual(nullEnumExpected.ToArray(), nullEnumTest.ToDynamicArray());
         }
 
-        #endregion
+#endregion
 
-        #region Executor Tests
+#region Executor Tests
 
         [TestMethod]
         public void FirstOrDefault_AsStringExpressions()
@@ -441,9 +454,9 @@ namespace System.Linq.Dynamic.Tests
             CollectionAssert.AreEqual(firstExpected.ToArray(), firstTest.ToDynamicArray());
         }
 
-        #endregion
+#endregion
 
-        #region Entitites Helper Function Tests
+#region Entitites Helper Function Tests
 
         [TestMethod]
         public void Entities_Helper_Function_Tests()
@@ -453,10 +466,17 @@ namespace System.Linq.Dynamic.Tests
             //Arrange
             PopulateTestData(5, 0);
 
+#if NET35 || NET40
             var expected = _context.Blogs.Select(x => DbFunctions.Reverse(x.Name)).ToArray();
 
             //Act
             var test = _context.Blogs.Select("DbFunctions.Reverse(Name)").ToDynamicArray();
+#elif NETCORE
+            var expected = _context.Blogs.Select(x => EF.Functions.Like("A", x.Name)).ToArray();
+
+            //Act
+            var test = _context.Blogs.Select("DbFunctions.Like(\"A\", Name)").ToDynamicArray();
+#endif
 
             //Assert
             CollectionAssert.AreEqual(expected, test);
@@ -486,6 +506,6 @@ namespace System.Linq.Dynamic.Tests
             }
         }
 
-        #endregion
+#endregion
     }
 }
