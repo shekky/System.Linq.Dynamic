@@ -443,8 +443,12 @@ namespace System.Linq.Dynamic.Tests
 
         #endregion
 
+#if NET35 || NET40
+
         #region Executor Tests
 
+        // This test is excluded from NETCORE because of
+        // bug in EntityFrameworkCore https://github.com/aspnet/EntityFrameworkCore/issues/12520
         [TestMethod]
         public void FirstOrDefault_AsStringExpressions()
         {
@@ -465,7 +469,6 @@ namespace System.Linq.Dynamic.Tests
 
         #endregion
 
-#if NET35 || NET40
         #region Entitites Helper Function Tests
 
         [TestMethod]
