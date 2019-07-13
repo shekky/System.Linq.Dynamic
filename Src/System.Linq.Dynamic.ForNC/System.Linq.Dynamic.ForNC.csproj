@@ -47,5 +47,4 @@
   <ItemGroup>
     <None Include="..\System.Linq.Dynamic\Properties\key.snk" Link="Properties\key.snk" />
   </ItemGroup>
-
 </Project>

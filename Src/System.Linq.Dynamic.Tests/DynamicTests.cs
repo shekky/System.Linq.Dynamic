@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using System.Linq.Dynamic;
 using System.Linq.Dynamic.Tests.Helpers;
 using System.Collections;
 using System.Collections.Generic;
 
 namespace System.Linq.Dynamic.Tests
 {
+
     [TestClass]
     public class DynamicTests
     {
@@ -110,7 +109,23 @@ namespace System.Linq.Dynamic.Tests
             Helper.ExpectException<ArgumentNullException>(() => qry.OrderBy(null));
             Helper.ExpectException<ArgumentException>(() => qry.OrderBy(""));
             Helper.ExpectException<ArgumentException>(() => qry.OrderBy(" "));
-        }    
+        }
+
+        [TestMethod]
+        public void Select_WithKnownResultProjection()
+        {
+            //Arrange
+            var testList = User.GenerateSampleModels(100);
+            var qry = testList.AsQueryable();
+
+            //Act
+            var userInfoes = qry.Select<UserInfo>("UserInfo(UserName)");
+
+            //Assert
+            CollectionAssert.AreEqual(
+                testList.Select(u => new UserInfo(u.UserName)).ToArray(),
+                userInfoes.ToArray());
+        }
 
         [TestMethod]
         public void Select()
