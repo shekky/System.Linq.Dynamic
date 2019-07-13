@@ -13,7 +13,7 @@
 
 | Package | Version |
 |---|---|
-| NuGet | [![Build status](https://img.shields.io/badge/nuget-1.1.20.1-blue.svg)](https://www.nuget.org/packages/AK.System.Linq.Dynamic/1.1.20.1) |
+| NuGet | [![Build status](https://img.shields.io/badge/nuget-1.1.32.2-blue.svg)](https://www.nuget.org/packages/AK.System.Linq.Dynamic/1.1.32.2) |
 
 # About
 As far as I know the history is somewhat similar to this.
