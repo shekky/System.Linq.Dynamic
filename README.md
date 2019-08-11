@@ -4,10 +4,10 @@
 
 | Configuration | Status |
 |---|---|
-| netfx35 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetFx35)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=4) |
-| netfx40 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetFx40)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=5) |
-| netcoreapp2.0 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/NetCore)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=7) |
-| Silverlight 5 | [![Build status](https://lib-joe.visualstudio.com/ak-dynamic-linq/_apis/build/status/SL)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=6) |
+| netfx35 | [![Build status](https://dev.azure.com/lib-joe/ak-dynamic-linq/_apis/build/status/NetFx35)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=4) |
+| netfx40 | [![Build status](https://dev.azure.com/lib-joe/ak-dynamic-linq/_apis/build/status/NetFx40)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=5) |
+| netcoreapp2.0 | [![Build status](https://dev.azure.com/lib-joe/ak-dynamic-linq/_apis/build/status/NetCore)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=7) |
+| Silverlight 5 | [![Build status](https://dev.azure.com/lib-joe/ak-dynamic-linq/_apis/build/status/SL)](https://lib-joe.visualstudio.com/ak-dynamic-linq/_build/latest?definitionId=6) |
 
 ## Package
 
