@@ -17,7 +17,7 @@
 
 ## Version History
 
-You can project release note on [wiki](https://github.com/meatGUY/System.Linq.Dynamic/wiki/Version-History).
+You can project release notes on [wiki](https://github.com/meatGUY/System.Linq.Dynamic/wiki/Version-History).
 
 # About
 As far as I know the history is somewhat similar to this.
