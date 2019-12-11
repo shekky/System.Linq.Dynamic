@@ -12,9 +12,7 @@
     <repository type="git" url="https://github.com/meatGUY/System.Linq.Dynamic" />
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
-      This is a fork of the System.Linq.Dynamic.Library project that was itself forked from the Microsoft System.Linq.Dynamic project.
-      The library allows you to construct dynamic linq queries using string expressions instead of C# expressions.
-      See more information on project site.
+      This is a fork of the System.Linq.Dynamic.Library project that was itself forked from the Microsoft System.Linq.Dynamic project. The library allows you to construct dynamic linq queries using string expressions instead of C# expressions. See more information on project site and project wiki.
     </description>
     <summary>Supports .NET Framework 3.5, 4.0+, Silverlight 5, .NET Core 2.0+</summary>
     <releaseNotes>
